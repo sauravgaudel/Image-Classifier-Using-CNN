@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Image Classifier</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <h1>Image Classifier</h1>
+
+        <p class="subtitle">
+            Upload an image and let the AI classify it.
+        </p>
+
+
+        <!-- Upload area -->
+
+        <div
+            class="upload-box"
+            id="uploadBox"
+        >
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+                hidden
+            >
+
+            <label for="imageInput">
+
+                <div class="upload-icon">
+                    📷
+                </div>
+
+                <h3>
+                    Choose an image
+                </h3>
+
+                <p>
+                    Click here to upload
+                </p>
+
+            </label>
+
+        </div>
+
+
+        <!-- Image preview -->
+
+        <div
+            class="preview-container"
+            id="previewContainer"
+        >
+
+            <img
+
+
+            
+                id="preview"
+                src=""
+                alt="Image preview"
+            >
+
+        </div>
+
+
+        <!-- Predict button -->
+
+        <button
+            id="predictButton"
+            disabled
+        >
+            Predict Image
+        </button>
+
+
+        <!-- Loading -->
+
+        <div
+            class="loading"
+            id="loading"
+        >
+
+            <div class="spinner"></div>
+
+            <p>
+                Classifying image...
+            </p>
+
+        </div>
+
+
+        <!-- Result -->
+
+        <div
+            class="result"
+            id="result"
+        >
+
+            <h2>
+                Prediction Result
+            </h2>
+
+            <div class="result-class">
+
+                <span>
+                    Class:
+                </span>
+
+                <strong id="predictedClass">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="confidence">
+
+                <span>
+                    Confidence:
+                </span>
+
+                <strong id="confidence">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="progress-container">
+
+                <div
+                    class="progress-bar"
+                    id="progressBar"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Error -->
+
+        <div
+            class="error"
+            id="error"
+        ></div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

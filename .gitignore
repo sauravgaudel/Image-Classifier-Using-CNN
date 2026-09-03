@@ -1,0 +1,23 @@
+# Python virtual environment
+MyEnv/
+venv/
+.venv/
+
+# Keras / TensorFlow models
+*.keras
+*.h5
+*.hdf5
+
+# Model directories
+Backend/Model/
+Backend/model/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Jupyter
+.ipynb_checkpoints/
