@@ -26,10 +26,8 @@ const progressBar =
 const error =
     document.getElementById("error");
 
-
-// --------------------------------------------------
 // When user selects an image
-// --------------------------------------------------
+
 
 imageInput.addEventListener(
     "change",
@@ -42,7 +40,7 @@ imageInput.addEventListener(
         }
 
 
-        // Make sure it is an image
+        // To Make sure it is an image
 
         if (!file.type.startsWith("image/")) {
 
@@ -79,10 +77,7 @@ imageInput.addEventListener(
     }
 );
 
-
-// --------------------------------------------------
 // Predict button
-// --------------------------------------------------
 
 predictButton.addEventListener(
     "click",
@@ -99,10 +94,7 @@ predictButton.addEventListener(
             return;
         }
 
-
-        // ------------------------------------------
         // Create FormData
-        // ------------------------------------------
 
         const formData = new FormData();
 
@@ -111,10 +103,7 @@ predictButton.addEventListener(
             file
         );
 
-
-        // ------------------------------------------
         // UI state
-        // ------------------------------------------
 
         predictButton.disabled = true;
 
@@ -127,9 +116,7 @@ predictButton.addEventListener(
 
         try {
 
-            // --------------------------------------
             // Send request to FastAPI
-            // --------------------------------------
 
             const response = await fetch(
                 "http://127.0.0.1:8000/predict",
@@ -140,17 +127,11 @@ predictButton.addEventListener(
                 }
             );
 
-
-            // --------------------------------------
             // Get JSON response
-            // --------------------------------------
 
             const data = await response.json();
 
-
-            // --------------------------------------
             // Check response
-            // --------------------------------------
 
             if (!response.ok) {
 
@@ -162,9 +143,7 @@ predictButton.addEventListener(
             }
 
 
-            // --------------------------------------
             // Display prediction
-            // --------------------------------------
 
             predictedClass.textContent =
                 data.class;
@@ -205,10 +184,7 @@ predictButton.addEventListener(
     }
 );
 
-
-// --------------------------------------------------
 // Error function
-// --------------------------------------------------
 
 function showError(message) {
 
