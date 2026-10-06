@@ -185,7 +185,6 @@ predictButton.addEventListener(
 );
 
 // Error function
-
 function showError(message) {
 
     error.textContent = message;
